@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panyaporn Portfolio</title>
+    <link rel="stylesheet" href="css2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tuffy:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Cascadia+Mono:ital,wght@0,200..700;1,200..700&family=Joan&display=swap" rel="stylesheet">
+<body>
+    <style>
+        body {
+            background-color: #2A4759; 
+            color: #333; 
+
+        }
+
+
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const faders = document.querySelectorAll(".fade-in");
+    
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+    
+        faders.forEach((el) => observer.observe(el));
+      });
+    </script>
+    
+
+    <script>
+      function revealOnScroll() {
+        const reveals = document.querySelectorAll('.reveal-on-scroll');
+        const windowHeight = window.innerHeight;
+        const revealPoint = 150; 
+  
+        reveals.forEach(el => {
+          const top = el.getBoundingClientRect().top;
+          if (top < windowHeight - revealPoint) {
+            el.classList.add('visible');
+          }
+        });
+      }
+  
+      window.addEventListener('scroll', revealOnScroll);
+      window.addEventListener('load', revealOnScroll);
+    </script>
+  
+  
+    
+    
+    
+
+
+
+    <header>
+
+        
+
+      <nav class="navbar">
+        <div class="logo">PROTFOIO</div>
+
+
+
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- Hamburger icon -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#aboutme" class="nav-link">About us</a></li>
+          <li><a href="#project" class="nav-link">Project</a></li>
+          
+
+          <li><a href="#contect1" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+        <script>
+          const menuToggle = document.getElementById('menu-toggle');
+          const navLinks = document.getElementById('nav-links');
+        
+          menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+          });
+        </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+        
+            window.addEventListener('scroll', () => {
+              let scrollPos = window.scrollY + 70; // ปรับค่า offset ตาม navbar สูง
+        
+              navLinks.forEach(link => {
+                const section = document.querySelector(link.getAttribute('href'));
+                if (section) {
+                  if (
+                    section.offsetTop <= scrollPos &&
+                    (section.offsetTop + section.offsetHeight) > scrollPos
+                  ) {
+                    link.classList.add('active');
+                  } else {
+                    link.classList.remove('active');
+                  }
+                }
+              });
+            });
+          });
+        </script>
+        
+        
+        
+        
+        
+        <script>
+          const sections = document.querySelectorAll("a");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+  let current = "";
+
+  navLinks.forEach((link) => {
+    const section = document.querySelector(link.getAttribute("href")); 
+    const sectionTop = section.offsetTop - 100;
+    const sectionHeight = section.clientHeight;
+
+    if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+      current = link.getAttribute("href").substring(1); 
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("href").substring(1) === current) {
+      link.classList.add("active"); 
+    }
+  });
+});
+
+            let lastScrollTop = 0;
+            const header = document.querySelector("header");
+          
+            window.addEventListener("scroll", function () {
+              const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+          
+              if (currentScroll > lastScrollTop) {
+                
+                header.classList.add("hide-header");
+              } else {
+               
+                header.classList.remove("hide-header");
+              }
+          
+              lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+          </script>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) { 
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+</script>
+
+          
+    </header>
+
+
+                    
+    <section>
+
+
+
+
+        <main>
+            </div>
+
+              
+            
+            <section class="intro" id="aboutme"> 
+                <div class="intro-container">
+    
+                    <picture>
+                      <!-- แสดง download-3.png เมื่อหน้าจอเล็ก -->
+                      <source srcset="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/IMG_3397.jpg" media="(max-width: 768px)">
+                      <!-- แสดง download-2.png สำหรับหน้าจอปกติ -->
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/IMG_3389.jpg" alt="Panyaporn" class="floating-image image-profile">
+                    </picture>
+                
+                
+                     
+                        
+                
+                
+              <h1 class="animated-title"> <span id="typewriter"></span></h1>
+                
+
+                
+                <div class="icon-container">
+                    <a href="https://www.facebook.com/yinnpyp/" target="_blank">
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/1.png" alt="Icon 1" class="clickable-icon">
+                    </a>
+                    <a href="https://www.instagram.com/yinnpyp/" target="_blank">
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/2.png" alt="Icon 2" class="clickable-icon">
+                    </a>
+                    <a href="https://www.facebook.com/yinnpyp/" target="_blank">
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/3.png" alt="Icon 3" class="clickable-icon">
+                    </a>
+                    <a href="https://github.com/Yinyinpyp" target="_blank">
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/4.png" alt="Icon 3" class="clickable-icon">
+                    </a>
+
+                  </div>
+                  <button class="resume-btn" onclick="downloadImage()">Resume</button>
+
+                  
+                  
+                  
+
+                  <script>
+                    const phrases = ["KHANAPOD", "DOME"];
+                    let currentPhrase = 0;
+                    let currentChar = 0;
+                    const typewriterElement = document.getElementById("typewriter");
+                  
+                    function type() {
+                      const currentText = phrases[currentPhrase];
+                      const fullLength = currentText.length;
+                      typewriterElement.textContent = currentText.substring(0, currentChar).padEnd(fullLength, ' ');
+                  
+                      if (currentChar < fullLength) {
+                        currentChar++;
+                        setTimeout(type, 150);
+                      } else {
+                        setTimeout(erase, 2000); 
+                      }
+                    }
+                  
+                    function erase() {
+                      const currentText = phrases[currentPhrase];
+                      const fullLength = currentText.length;
+                      typewriterElement.textContent = currentText.substring(0, currentChar).padEnd(fullLength, ' ');
+                  
+                      if (currentChar > 0) {
+                        currentChar--;
+                        setTimeout(erase, 100);
+                      } else {
+                        currentPhrase = (currentPhrase + 1) % phrases.length;
+                        setTimeout(type, 500);
+                      }
+                    }
+                  
+                    type();
+                  </script>
+                  
+                
+
+
+                <script>
+                    function downloadImage() {
+                      
+                      const link = document.createElement('a');
+                      link.href = 'images/resume1.pdf'; 
+                      link.download = 'images/resume1.pdf'; 
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }
+                    </script>
+                    
+            </section>
+            
+            
+
+                <section class="skills">
+                  <div class="skills-container">
+                    
+                   
+                    <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/IMG_3397.jpg" alt="Panyaporn" class="floating-image">
+                    
+                    
+                   
+                      <h1 class="cascadia-mono" id="animatedText">
+                      
+                      
+                     
+                        Hello, my name is Khanapod, but you can call me Dome. I graduated from Bangkok University with a degree in Communication Arts, majoring in Event Management.
+
+                        After graduation, I worked as a content creator at Goojodoj Company for 7 months. Currently, I have stepped out to explore and gain more personal experience by running my own online business through platforms such as TikTok, Shopee, and Lazada.
+                        
+                        Now, I am looking to further grow and gain more professional experience. If your company is looking for someone passionate about development and growth, please feel free to contact me.
+                      </h1>
+                      
+                    <button class="intro-btn" onclick="toggleLanguage()">สลับภาษา / Toggle Language</button>
+                  </section>
+                  
+                  
+                  
+                  
+                  <script>
+                    
+                    
+                    const textElement = document.getElementById("animatedText");
+                  
+                    const thaiText = `
+                       Hello, my name is Khanapod, but you can call me Dome. I graduated from Bangkok University with a degree in Communication Arts, majoring in Event Management.
+
+After graduation, I worked as a content creator at Goojodoj Company for 7 months. Currently, I have stepped out to explore and gain more personal experience by running my own online business through platforms such as TikTok, Shopee, and Lazada.
+
+Now, I am looking to further grow and gain more professional experience. If your company is looking for someone passionate about development and growth, please feel free to contact me.
+                      </h1>
+                      
+                    `;
+                    
+
+                    const englishText = `
+                      <span>สวัสดีครับ ผมชื่อ คณพศ ชื่อเล่น โดม จบมหาวิทยาลัยกรุงเทพ คณะนิเทศศาสตร์ สาขาอีเว้น มีประสบการณ์ในการเป็นครีเอทเตอร์หลังจบใหม่ ทำงานอยู่ 7 เดือน ที่บริษัท goojodoj ปัจจุบันออกมาหาประสบการณ์ตัวเองโดยการขายของออนไลน์ในแพลตฟรอม tiktok shopee lazada ตอนนี้ผมอยากหาประสบการณ์เพิ่ม ถ้าบริษัทที่อยากเติบโต และมพัฒนา สามารถติดต่อผมได้เลยครับ<br><br>
+                    `;
+                  
+                    let isThai = true;
+                  
+                    function toggleLanguage() {
+                      textElement.innerHTML = isThai ? englishText : thaiText;
+                      isThai = !isThai;
+                    }
+                  </script>
+                 
+                <script>
+                  function revealOnScroll() {
+                    const reveals = document.querySelectorAll('.reveal');
+                    const windowHeight = window.innerHeight;
+                    const revealPoint = 100;
+                
+                    reveals.forEach((element) => {
+                      const elementTop = element.getBoundingClientRect().top;
+                
+                      if (elementTop < windowHeight - revealPoint) {
+                        element.classList.add('active');
+                      }
+                    });
+                  }
+                
+                  window.addEventListener('scroll', revealOnScroll);
+                  window.addEventListener('load', revealOnScroll);
+                </script>
+                
+
+                </section>
+                <section class="skill reveal">
+                    <h1>Work experience</h1>
+                    <div class="skill-grid">
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/skill1.png">
+                      <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/skill2.png">
+
+                    </div>
+                  </section>
+                              <script>
+                                function revealOnScroll() {
+                                  const reveals = document.querySelectorAll('.reveal');
+                                  const windowHeight = window.innerHeight;
+                                  const revealPoint = 150;
+                              
+                                  reveals.forEach((element) => {
+                                    const elementTop = element.getBoundingClientRect().top;
+                              
+                                    if (elementTop < windowHeight - revealPoint) {
+                                      element.classList.add('active');
+                                    }
+                                  });
+                                }
+                              
+                                window.addEventListener('scroll', revealOnScroll);
+                                window.addEventListener('load', revealOnScroll);
+                              </script>
+                              </section>
+
+                
+                  
+                <section class="project2" id="project"> 
+                  <h1>My Projects</h1>
+                  <div class="image-grid">
+                      <a href="https://www.tiktok.com/@goojodoq_th/video/7382901997357337876?_t=ZS-8wWNKTrAbNC&_r=1">
+                          <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/pj1.png" alt="Project 2" class="project-image"></a>
+                          <a href="https://www.tiktok.com/@goojodoq.joinnow/video/7371032898058603796?_t=ZS-8wWNOMVK7OM&_r=1">
+
+                            <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/pj4.png" alt="Project 2" class="project-image">
+                          </a>
+                          <a href="https://www.tiktok.com/@goojodoq_th/video/7439561304165092628?_t=ZS-8wWNNBuVNPr&_r=1">
+                            <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/p9.png" alt="Project 2" class="project-image">
+                          </a>
+                    
+                      <a href="https://www.tiktok.com/@goojodoq.joinnow/video/7374365396503153940?_t=ZS-8wWNPplbyOW&_r=1">
+                        <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/pj5.png" alt="Project 2" class="project-image">
+                      </a>
+                      <a href="https://www.tiktok.com/@goojodoq_th?_t=ZS-8wWNNaaVQdb&_r=1">
+                        <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/pj6.png" alt="Project 2" class="project-image">
+                      </a>          
+                      <a href="https://www.tiktok.com/@saisabuy.official/video/7467397347807399184?_t=ZS-8wWNQpIJu48&_r=1">
+                        <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/pj7.png" alt="Project 2" class="project-image">
+                      </a>
+
+                      
+
+
+
+
+                    </div>
+                    
+                      
+                    </section>
+                  </section>
+                  <script>
+                    function revealOnScroll() {
+                      const images = document.querySelectorAll('.project2 img');
+                      const windowHeight = window.innerHeight;
+                  
+                      images.forEach((img) => {
+                        const elementTop = img.getBoundingClientRect().top;
+                        if (elementTop < windowHeight - 100) {
+                          img.classList.add('visible');
+                        }
+                      });
+                    }
+                  
+                    window.addEventListener('scroll', revealOnScroll);
+                    window.addEventListener('load', revealOnScroll);
+                  </script>
+            <script>
+              function revealOnScroll() {
+                const reveals = document.querySelectorAll('.reveal');
+                const windowHeight = window.innerHeight;
+                const revealPoint = 150;
+            
+                reveals.forEach((element) => {
+                  const elementTop = element.getBoundingClientRect().top;
+            
+                  if (elementTop < windowHeight - revealPoint) {
+                    element.classList.add('active');
+                  }
+                });
+              }
+            
+              window.addEventListener('scroll', revealOnScroll);
+              window.addEventListener('load', revealOnScroll);
+            </script>
+
+
+            
+
+
+            
+
+            <section class="contect1" id="contect1">
+                <img src="/Users/panyaponkiatrungrit/Desktop/portfolopanyaporn/dome/images/context1.png" alt="Contact Image">
+                
+
+                
+
+                <div id="displayValues">
+                    
+                </div>
+
+                <script>
+                    function showValues() {
+                      const input1 = document.getElementById('input1');
+                      const input2 = document.getElementById('input2');
+                      const input3 = document.getElementById('input3');
+                    
+                      
+                      input1.placeholder = input1.value;
+                      input2.placeholder = input2.value;
+                      input3.placeholder = input3.value;
+                    
+                    
+                      input1.value = '';
+                      input2.value = '';
+                      input3.value = '';
+                    }
+
+                    
+                    </script>
+                    
+
+                    
+                    
+            </section>
+            
+
+                
+
+
+
+                
+
+
+            
+
+        </main>
+
+          
+    
+
+   
+    <footer>
+        <div class="contact-info">
+            <div class="contact-item">
+                <strong>Email</strong><br>
+                domeknp@outlook.com
+            </div>
+            <div class="contact-item">
+                <strong>Phone Number</strong><br>
+                061-9154929
+            </div>
+            <div class="contact-item">
+                <strong>Line</strong><br>
+                yinyinpyp
+            </div>
+            <div class="contact-item">
+                <strong>Location</strong><br>
+                Rama two
+            </div>
+            
+
+        </div>
+    </footer>
+</body>
+</html>

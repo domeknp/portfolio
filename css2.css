@@ -1,0 +1,1633 @@
+* {
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+html, body {
+    height: 100%;
+    margin: 0; 
+}
+
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+  
+
+html {
+    scroll-behavior: smooth;
+  }
+
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/path/to/font/MyCustomFont.woff2') format('woff2'),
+         url('/path/to/font/MyCustomFont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'MyCustomFont', sans-serif; 
+}
+
+
+
+
+.container {
+    display: grid; 
+    grid-template-columns: 95px 1fr; 
+    height: 100vh; 
+    position: fixed; 
+    top :0;
+    left: 0; 
+    color: #F8F5F5;
+    overflow: auto;
+}
+
+.sidebar {
+    background-color: #f0f0f0; 
+    padding: 30px; 
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+.sidebar a {
+    color: #FFAE58;
+    font-size: 25px;
+    font-weight: bold;
+    position: fixed; 
+    text-decoration: none;
+    top: -10px;
+    z-index: 999999; 
+}
+.anuphan-text {
+  font-family: "Anuphan", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; 
+  font-style: normal;
+}
+
+
+
+
+
+
+.logo {
+    max-width: 100%; 
+    height: auto; 
+    margin-bottom: 20px; 
+    width: 100%;
+    
+}
+
+.main-content {
+    padding: 20px; 
+    overflow: auto; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    right: 80px;
+    width: 100vw;
+    padding: 20px 80px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
+    overflow-x: hidden;
+  }
+  
+
+  nav h1, nav ul {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  
+  
+  nav h1 {
+    margin: 0;
+    padding: 0 10px;
+    font-family: 'Tuffy', serif;
+    font-size: 30px;
+    color: #2A4759;
+    flex: 1; 
+  }
+  
+  
+  
+  
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #aa7b7b;
+    z-index: 1000;
+    font-size:20px;
+    padding: 10px 20px;
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  nav h1 {
+  position: relative; 
+  right: 300px;            
+  color: #2A4759;
+  font-size: 30px;
+  margin-left: 0px;      
+  padding-left: 0;
+  }
+  /* เริ่มต้นซ่อน <h1> สำหรับขนาดหน้าจอเล็ก */
+  nav h1 {
+  color: #2A4759;
+  font-size: 30px;
+  margin-left: 500px;
+  padding-left: 0;
+  text-align: left;
+  }
+  
+  /* ซ่อน <h1> เมื่อหน้าจอเล็กลง */
+  /* Layout ปกติ */
+  .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 10px 20px;
+  color: #fff;
+  }
+  .nav-link {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 5px 10px;
+  }
+  
+  .nav-link.active {
+  color: black; /* สีที่เปลี่ยนตอน active */
+  font-weight: bold;
+  }
+  
+  
+  @media screen and (min-width: 768px) {
+  .navbar.scrolled {
+    background: #fff;
+    color: #2A4759;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar.scrolled a {
+    color: #2A4759;
+  }
+  }
+  
+  /* ปรับสีลิงก์ปกติ (จอเล็กหรือยังไม่ scroll) */
+  .navbar a {
+  color: #2A4759;
+  text-decoration: none;
+  padding: 0 10px;
+  }
+  
+  .logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 50px;
+  }
+  
+  .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  }
+  
+  .nav-links li a {
+  color: #2A4759;
+  text-decoration: none;
+  }
+  
+  /* ปิดแถบเมนูไว้ในมือถือ */
+  .menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #2A4759;
+  }
+  
+  /* Responsive สำหรับมือถือ */
+  @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin: 10px 0;
+  }
+  }
+
+
+.animated-title {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #333;
+  min-width: 320px;
+  height: 100px;
+  margin-left: -10px;
+  margin-top: 200px;
+  transition: font-size 0.3s ease, margin-top 0.3s ease;
+  
+}
+
+@media (max-width: 768px) {
+  .animated-title {
+    font-size: 20px; /* ปรับขนาดฟอนต์ให้เล็กลง */
+    margin-top: 100px; /* ปรับระยะ margin-top ให้เหมาะสมกับจอเล็ก */
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-title {
+    font-size: 20px; /* ย่อฟอนต์เพิ่มเติมสำหรับจอขนาดเล็กมาก */
+    margin-top: 80px;
+  }
+}
+
+
+
+
+#typewriter {
+  display: inline-block;
+  min-width: 240px;
+  font-size: 50px;
+}
+
+/* ปรับขนาดตัวอักษรให้พอดีกับหน้าจอเล็กลง โดยไม่ใช้ margin-top เยอะ */
+@media screen and (max-width: 768px) {
+  #typewriter .animated-title  {
+    font-size: clamp(35px, 6vw, 40px);
+    min-width: 180px;
+
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #typewriter {
+    font-size: clamp(32px, 7vw, 35px);
+    min-width: 140px;
+
+  }
+}
+
+
+
+
+
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-20px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateX(0); 
+        opacity: 1; 
+    }
+}
+
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+.profile-picture {
+    display: flex;
+    justify-content: flex-end; 
+}
+.profile-picture img {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right: 90px;
+    top: 190px; 
+  }
+  
+
+
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px;
+}
+.intro img {
+  width: 60%;
+  height: auto;
+  float: left;
+  margin-left: -40px;
+  margin-top: 190px;
+
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  transform: translateX(100px);
+  animation: fadeInSlideRight 1.5s ease-out forwards;
+}
+
+
+
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .intro img {
+    width: 100%;
+    margin-left: -150px;  
+    margin-right: auto;
+    float: none;
+    margin-top: 150px;
+    
+  }
+}
+
+
+
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+
+
+
+
+.intro {
+  max-width: 50%;
+  position: absolute;
+  left: 200px;
+  top: 0px;
+}
+
+@media screen and (max-width: 768px) {
+  .intro {
+    left: 20px; 
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro {
+    left: 50px; 
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .intro img {
+    width: 150%;
+    margin-left: -70px;  
+    margin-right: auto;
+    float: none;
+    margin-top: 150px;
+    
+  }
+}
+
+
+
+
+@keyframes fadeInSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+
+
+
+  
+
+
+.intro h2{
+  max-width: 50%;
+  position: absolute;
+  left: 200px; 
+  top: 200px;  
+}
+
+.intro h1 {
+    font-size: 40px;
+    color: #333;
+}
+
+.intro h1 span {
+    color: #DDA853;
+    margin-left: 400px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .intro h1 {
+    font-size: 10px;  
+    margin-top: 520px; 
+    margin-left: -410px;
+  }
+  .intro p {
+    font-size: 25px;
+    margin: 10px 0;
+    margin-top: 10px;
+    margin-left: -400px;
+}
+}
+
+
+@media screen and (max-width: 768px) {
+  .intro p {
+    font-size: 18px;  
+
+  }
+}
+
+.resume-btn {
+    background-color: #D4C9BE;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    z-index: 1000;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 400px;
+}
+@media screen and (max-width: 768px) {
+  .resume-btn{
+    margin-left: 10px;
+    margin-top: 30px;
+
+  }
+}
+
+
+
+
+
+
+
+
+.intro-btn {
+    background-color: #e6e6e6;
+    color: #b68d8d;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 12px;
+    border-radius: 5px;
+    margin-top: 50px; 
+    margin-left: 90px;
+}
+
+@media (max-width: 768px) {
+  .intro-btn {
+    font-size: 10px;
+    padding: 8px 16px;
+    margin-left: 0px;
+  }
+}
+
+/* ปรับขนาดปุ่มอีกเมื่อหน้าจอไม่เกิน 480px */
+@media (max-width: 480px) {
+  .intro-btn {
+    font-size: 9px;
+    padding: 6px 12px;
+    margin-left: 0px;
+  }
+}
+.icon-container {
+  display: flex;
+  flex-direction: row; /* เรียงแนวตั้ง */
+  gap: 50px; /* ระยะห่างระหว่างรูป */
+  position: relative; 
+  z-index: 0; 
+  margin-top: -150px;
+  margin-left: 440px;
+
+}
+
+.icon-container img {
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+.icon-container a {
+  display: inline-block; 
+}
+
+
+.icon-container img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+  .icon-container {
+    flex-direction: row; /* จัดเรียงแนวนอน */
+    align-items: center;
+    flex-wrap: wrap; /* ให้ wrap ถ้าแน่นเกิน */
+    margin-left: 0px;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .icon-container img {
+    width: 30px;
+    height: 30px;
+    margin: 0px;
+    margin-top: 10px;
+  }
+}
+
+
+
+  
+
+
+
+
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+  color: #afacaa;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  }
+  
+  .nav-link.active {
+  color: #595959; 
+  font-weight: bold;
+  }
+  
+
+
+
+
+  .content {
+    height: 100vh; 
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  
+  
+.seeall {
+    background-color: #DBB5B5;
+    color: #534c4c;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 999px; 
+    top: 50px;
+    margin-left: 90px;
+}
+
+
+.cascadia-mono {
+  font-family: 'Tuffy', serif, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-optical-sizing: auto;
+  margin-left: 10px;
+  transition: margin-top 0.3s ease, font-size 0.3s ease;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* ฟอนต์ขนาดเริ่มต้น ปรับตาม vw */
+}
+
+/* เมื่อหน้าจอเล็กลง (สูงสุด 768px) ให้ขยับข้อความขึ้นและปรับขนาดฟอนต์ */
+@media (max-width: 768px) {
+  .cascadia-mono {
+    margin-top: -500px; /* ลดการเลื่อนขึ้นให้น้อยลงจาก -500px */
+    font-size: clamp(0.8rem, 3vw, 1.0rem); /* ฟอนต์เล็กลงตามขนาดหน้าจอ */
+  }
+}
+
+/* สำหรับหน้าจอเล็กลงอีก (สูงสุด 480px) */
+@media (max-width: 480px) {
+  .cascadia-mono {
+    margin-top: -500px;
+    font-size: clamp(0.7rem, 4vw, 0.5rem);
+  }
+}
+
+
+  
+
+
+
+
+  
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  display: block;
+  pointer-events: none; 
+}
+
+@media (max-width: 768px) {
+  #video-background {
+    display: none;
+  }
+
+  body {
+    background-color: #e7cfcf;
+  }
+}
+
+  
+
+
+
+
+
+.skills {
+  background-color:#e2e2e2cb; 
+  padding: 50px 30px;
+  color: #000000;
+  margin-top: 800px;
+  margin-left: 0px;
+  width: 60%;
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(183, 182, 182, 0.2); 
+}
+@media (max-width: 768px) {
+  .skills {
+    padding: 0px 0px;
+    font-size: 10px;
+    margin-top: 900px;  
+    margin-left: 0px; 
+    width: auto;  
+    height: 450px;  
+  }
+}
+
+
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
+  
+  .skills h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  
+  .skills ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .skills li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  .contact-info {
+    /* position: fixed; ❌ ลบออก */
+    /* bottom: 0; ❌ ลบออก */
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+
+.contact-info div {
+    margin: 0 15px; 
+    flex: 1 1 auto; /* ให้ขนาดปรับตามพื้นที่ */
+    min-width: 0px; /* ป้องกันการบีบตัวมากเกินไป */
+}
+
+/* ปรับการแสดงผลเมื่อหน้าจอเล็กกว่า 600px */
+@media (max-width: 600px) {
+  .contact-info {
+      flex-direction: row; /* จัดเรียงแนวตั้งจริง ๆ ตามคอมเมนต์ */
+      padding: 0px 0; /* ลด padding */
+  }
+
+  .contact-info div {
+      margin: 0px 0; /* ลดระยะห่าง */
+      font-size: 8px; /* ลดขนาดตัวอักษร */
+  }
+}
+
+@media (max-width: 400px) {
+  .contact-info {
+      padding: 0px 0;
+  }
+
+  .contact-info div {
+      font-size: 5px;
+      margin: 0px 0;
+  }
+}
+
+
+
+
+nav ul {
+list-style: none;
+padding: 0;
+transition: margin-left 0.3s ease; 
+}
+
+@media screen and (max-width: 768px) {
+nav {
+  padding: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-left: 70px;
+  margin-top: 20px;
+}
+
+nav li, nav a {
+  margin: 0;
+  padding: 0;
+}
+}
+
+
+@media screen and (max-width: 480px) {
+nav ul {
+  margin-left: -10px;
+}
+}
+
+
+nav ul li {
+  display: inline-block;
+  margin-right: 0px;
+}
+
+nav ul li a {
+text-decoration: none;
+color: #2A4759; 
+transition: color 0.3s ease;
+}
+/* ระยะห่างระหว่างเมนูปกติ */
+nav ul li {
+margin: 0 40px; 
+}
+
+/* หน้าจอเล็กลง */
+@media screen and (max-width: 768px) {
+nav ul li {
+  margin: 0 20px; 
+}
+}
+
+@media screen and (max-width: 480px) {
+nav ul li {
+  
+  margin: 0 20px; 
+}
+}
+
+
+
+nav.scrolled ul li a {
+color: #2A4759; 
+}
+
+
+nav ul li a:hover {
+  color: #afacaa; 
+}
+
+
+.animated-title {
+    position: relative;
+    left: 10px;
+    top: 40px;
+    font-size: 15px;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.8;
+    animation: fadeInMove 1.5s ease-out;
+}
+
+  
+  @keyframes fadeInMove {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .Service {
+    font-size: 30px; 
+    padding: 100px 40px;
+    background-color: #DBB5B5;
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+    font-weight: bold;
+    font-family: 'Tuffy', serif; 
+  }
+  
+
+  
+  
+
+.Service img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); 
+  margin-top: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+@media screen and (max-width: 768px) {
+  .Service {
+    font-size: 20px;         
+    padding: 40px 20px;  
+  }
+
+  .Service img {
+    max-width: 140px;       
+    margin-top: 20px;       
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);  
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);  
+}
+@media screen and (max-width: 768px) {
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(20px); 
+    transition: all 0.6s ease-in-out; 
+  }
+}
+
+
+
+.Service img:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+}
+
+
+.Service img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); 
+}
+.skills-container {
+  position: relative;
+  padding-left: 500px; 
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 0px;
+}
+
+.floating-image {
+  position: absolute;
+  top: -80px;
+  left: 900px;
+  width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* แสดง .intro-container และซ่อนรูปใน .skills เมื่อจอเล็ก */
+@media screen and (max-width: 768px) {
+  .intro-img {
+    display: block;
+  }
+
+  .skills-container .floating-image {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+.skill {
+  background-color: #f0f0f0b3;
+  text-align: center;
+
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  width: 1000px; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+  padding: 20px;
+  box-sizing: border-box;
+  margin-top: 100px;
+
+
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 3, 0.3); 
+}
+@media screen and (max-width: 768px) {
+  .skill {
+    width: 100%;         /* ให้เต็มความกว้างของ container */
+    height: auto;        /* ปรับเป็น auto ดีกว่าถ้าไม่ต้องการบังคับสูงเต็ม */
+    padding: 15px;
+    margin-top: 40px;
+    box-sizing: border-box; /* ให้ padding ไม่ทำให้ขนาดเกิน width */
+  }
+}
+
+
+
+
+
+.skills-container {
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateX(-50px); 
+  animation: fadeInSlideLeft 1.2s ease-out forwards;
+}
+
+/* เมื่อหน้าจอมีขนาดเล็กกว่า 768px */
+@media screen and (max-width: 768px) {
+  .skills-container {
+    margin-top: 540px; 
+    transform: translateX(0) translateY(20px); 
+    opacity: 1; 
+    width: 100%;
+  }
+}
+
+
+@keyframes fadeInSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); 
+  }
+}
+.animated-text  {
+  display: inline-block; /* ✅ ให้หลาย block อยู่ในบรรทัดเดียว */
+  font-size: 25px;
+  margin-top: 450px;
+  margin-right: 450px; /* ปรับตามตำแหน่ง */
+  color: #ffffff;
+}
+
+
+
+
+  
+
+@media (max-width: 768px) {
+  .animated-text {
+    font-size: 20px;
+  }
+  }
+  
+  /* เมื่อหน้าจอกว้างไม่เกิน 480px */
+  @media (max-width: 480px) {
+  .animated-text {
+    font-size: 15px;
+  }
+  }/* เมื่อหน้าจอกว้างไม่เกิน 768px */
+  @media (max-width: 768px) {
+  .animated-text p {
+    font-size: 15px;
+  }
+  }
+  
+  /* เมื่อหน้าจอกว้างไม่เกิน 480px */
+  @media (max-width: 480px) {
+  .animated-text p{
+    font-size: 8px;
+  }
+  }
+
+
+
+
+
+
+
+
+.skill h1 {
+  font-size: 2rem; 
+  margin-bottom: 40px;
+  color: #000000;
+  font-weight: bold;
+  font-family: 'Tuffy', serif;
+  position: relative; 
+  left: 0px;
+  top: 50px}
+
+
+
+
+/* ตั้งค่าพื้นฐาน */
+.skill-grid {
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  padding: 20px;
+  width: 100%; 
+}
+
+/* รูปภาพในแต่ละคอลัมน์ */
+.skill-grid img {
+  width: 100%; 
+  gap: 150px;
+  max-width: 250px; 
+  height: auto; 
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 50px;
+  flex: 1 1 calc(33.333% - 10px);
+}
+
+/* สำหรับหน้าจอที่กว้างกว่า 768px ให้แสดง 4 รูปในแถว */
+@media screen and (min-width: 768px) {
+  .skill-grid img {
+    flex: 1 1 calc(25% - 10px); 
+    max-width: 250px; 
+  }
+}
+
+/* สำหรับหน้าจอที่กว้างกว่า 480px และน้อยกว่า 768px ให้แสดง 3 รูปในแถว */
+@media screen and (max-width: 767px) {
+  .skill-grid img {
+    flex: 1 1 calc(33.333% - 10px); 
+    max-width: 150px; 
+  }
+}
+
+/* สำหรับหน้าจอที่เล็กกว่าหรือเท่ากับ 480px ให้แสดง 2 รูปในแถว */
+@media screen and (max-width: 480px) {
+  .skill-grid img {
+    flex: 1 1 calc(50% - 10px); 
+    max-width: 40%; 
+  }
+}
+
+
+
+.skill-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0px;
+}
+
+
+.project {
+    margin-top: 100px;
+    padding: 100px 40px;
+    background-color: #DBB5B5;
+    font-size: 30px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+    font-weight: bold; 
+    font-family: 'Joan', sans-serif; 
+}
+
+
+
+.project img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 90px;
+  margin-top: 90px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.project img:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+}
+
+
+.Certificates {
+    margin-top: 350px;
+    font-size: 30px; 
+    margin-bottom: 20px; 
+    text-align: center; 
+    color: #333; 
+    font-weight: bold; 
+    font-family: 'Poppins', sans-serif; 
+}   
+@media screen and (max-width: 768px) {
+  .Certificates {
+      margin-top: 100px; 
+      max-width: 450px; 
+      margin-left: 0px;
+      font-size: 25px;
+  }
+}
+.Certificates img {
+  width: 100%; 
+  margin-top: 100px; 
+  max-width: 550px; 
+  height: auto; 
+  margin: 0px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+/* สำหรับหน้าจอที่มีขนาดเล็กกว่า 768px (แท็บเล็ต) */
+@media screen and (max-width: 768px) {
+  .Certificates img {
+      margin-top: 50px; 
+      max-width: 450px; 
+      margin-left: 0px;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .Certificates img {
+      margin-top: 20px; 
+      max-width: 70%; 
+      margin-left: 0px;
+  }
+}
+
+
+.Certificates img:hover {
+    transform: scale(1.10); 
+}
+.Certificates h1 {
+    font-family: 'Tuffy', serif;
+}
+     
+
+.contect1 {
+    position: relative;
+    text-align: center; 
+  }
+  
+  .contect1 img {
+    width: 100%; 
+    height: auto; 
+    max-width: 1200px; 
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: 80px;
+  }
+  @media screen and (max-width: 768px) {
+    .contect1 img {
+        margin-top: 50px; 
+        max-width: 650px; 
+        margin-left: 0px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .contect1 img {
+        margin-top: 50px; 
+        max-width: 100%; 
+        margin-left: 0px;
+    }
+  }
+  
+  
+  .text-box {
+    position: absolute;
+    top: 75%; 
+    left: 23%;
+    transform: translate(20%, -50%);
+    background-color: rgba(175, 168, 168, 0); 
+    padding: 5px;
+    border-radius: 10px;
+    width: 40%; 
+}
+
+.text-box input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+/* ลดขนาด font เมื่อจอเล็กลง (เช่น แท็บเล็ต) */
+@media screen and (max-width: 768px) {
+.text-box input {
+  font-size: 10px;
+  padding: 8px;
+}
+}
+
+
+
+
+
+/* สำหรับหน้าจอที่เล็กกว่า 768px (แท็บเล็ตและมือถือ) */
+
+
+#input2 {
+  height: 45px; 
+  resize: vertical; 
+}
+
+#input1 {
+  height: 45px; 
+  resize: vertical; 
+}
+
+#input3 {
+  height: 130px; 
+  resize: vertical; 
+}
+
+
+/* สำหรับหน้าจอที่เล็กกว่า 768px (แท็บเล็ตและมือถือ) */
+@media screen and (max-width: 768px) {
+  #input2 {
+    
+    
+    height: 20px;  
+    margin-top: 10px;
+  }
+
+  #input1 {
+    height: 10px; 
+    margin-top: 50px; 
+  }
+
+  #input3 {
+    height: 50px;
+    margin-top: 10px;  
+  }
+}
+
+/* สำหรับหน้าจอที่เล็กกว่า 480px (มือถือ) */
+@media screen and (max-width: 480px) {
+  #input1 {
+    margin-top: 0px;
+    height: 5px; 
+  }
+
+  #input2 {
+    margin-top: 5px;
+    height: 15px;  
+  }
+
+  #input3 {
+    margin-top: 5px;
+    height: 40px;  
+  }
+}
+
+.send {
+  margin-top: 100px;
+  background-color: #8e8983;
+  color: #f7f7f7;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 999px; 
+  top: 250px;
+  margin-left: 0px;
+  margin-top: 40px;
+}
+
+/* สำหรับหน้าจอที่เล็กกว่า 768px (เช่น มือถือ) */
+@media screen and (max-width: 768px) {
+  .send {
+      font-size: 6px;  
+      padding: 8px 16px;  
+      margin-top: 0px;  
+      width: auto;  
+  }
+}
+
+/* สำหรับหน้าจอที่เล็กกว่า 480px */
+@media screen and (max-width: 480px) {
+  .send {
+      font-size: 9px;  
+      padding: 6px 12px; 
+      margin-top: 10px;  
+  }
+}
+
+
+#portfolio1 {
+    scroll-margin-top: 1000px; 
+  }
+
+  
+  .project2 {
+    max-width: 1000px;
+    
+    margin: 0 auto;
+    padding: 60px 40px;
+    text-align: center;
+    background: #f9f9f9b3;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    margin-top: 40px;
+  }
+  
+  .project2 h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Tuffy', serif;
+    margin-top: 30px;
+  }
+  
+  /* รูปภาพ */
+  .project2 .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 50px;
+    justify-items: center;
+  }
+  
+  .project2 .image-grid img {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project2 .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-items: center;
+    position: relative;
+    overflow: visible; 
+  }
+  
+  .project2 .image-grid img {
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; 
+    z-index: 1;     
+  }
+  
+  .project2 .image-grid img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.45);
+    z-index: 10;          
+  }
+  @media screen and (max-width: 768px) {
+    .project2 .image-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr); /* 2 คอลัมน์ */
+      gap: 20px;
+      justify-items: center;
+      padding: 0px 10px;
+      margin-left: 10px;
+    }
+  
+    .project2 .image-grid img {
+      max-width: 150%;
+      height: auto;
+      border-radius: 10px;
+    }
+  }
+  
+  
+  
+  
+
+  
+  
+  .project2 img {
+    width: 100%;
+    max-width: 80%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.0s ease;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  @media screen and (max-width: 768px) {
+    .project2 img {
+      max-width: 120%;        
+      margin: 20px auto;     
+      display: block;        
+    }
+  }
+  
+  
+  .project2 img.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Hover Effect */
+  .project2 img:hover {
+    transform: scale(1.15);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  .project2 a:hover {
+    background-color: #ffffff;
+  }
+
+.hover-image {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.hover-image:hover::after {
+  opacity: 1;
+}
+
+.image-profile {
+  position: absolute;  
+  top: 20px; 
+  left: 20px; 
+  width: 150px; 
+  height: auto;
+}
+
+
+@media (max-width: 768px) {
+  .image-profile {
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%); 
+      width: 120px; 
+  }
+}
+
+  
+
+
+
+
+
+  
+  
+
+
+
+  
